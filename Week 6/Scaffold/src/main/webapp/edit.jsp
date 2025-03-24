@@ -1,10 +1,6 @@
 <%@ page import="uts.isd.model.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%
-    User user = (User)session.getAttribute("loggedInUser");
-%>
-
 <html>
 <head>
     <title>Edit</title>
@@ -20,12 +16,12 @@
         <p>KEEP YOUR PASSWORD SECURE</p>
     </div>
     <div class="main-content">
-        <form action="Handlers/EditHandler.jsp" method="post">
+        <form>
             <label for="email">Email</label>
-            <input id="email" name="email" type="text" value=<%=user.getEmail()%>>
+            <input id="email" name="email" type="text">
 
             <label for="password">Password</label>
-            <input id="password" name="password" type="password" value=<%=user.getPassword()%>>
+            <input id="password" name="password" type="password">
 
             <label for="genre">Favourite Genre</label>
             <select name="genre" id="genre">
