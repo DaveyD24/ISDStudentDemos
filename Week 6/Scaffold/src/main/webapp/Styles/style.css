@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700');
+
+:root {
+    --black: #878787;
+    --orange: #D4AA7D;
+    --light-orange: #EFD09E;
+    font-family: "Lato", sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.content > h1{
+    padding: 10px;
+}
+
+.header {
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 50px;
+    font-weight: 200;
+    color: var(--black);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 100px;
+}
+
+.items li {
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+.items a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.items li img {
+    width: 20px;
+    height: 3%;
+}
+
+.items li:hover {
+    color: black;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+
+.content {
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.content h1 {
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+.content p {
+    font-weight: 100;
+    font-size: 2rem;
+    color: #777
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    text-align: center;
+}
+
+.footer {
+    height: 5%;
+    background-color: var(--black);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: transparent;
+    color: #373737;
+    border: 2px solid black;
+    border-radius: 0;
+    transition: 0.2s ease-in-out;
+    padding: 10px;
+    width: 250px;
+}
+
+button:hover {
+    background-color: #272727;
+    color: white;
+    cursor: pointer;
+}
+
+#reg {
+    background-color: transparent;
+    color: #373737;
+    border: 2px solid black;
+    border-radius: 0;
+    transition: 0.2s ease-in-out;
+    padding: 10px;
+    width: 250px;
+}
+
+#reg:hover {
+    background-color: #272727;
+    color: white;
+    cursor: pointer;
+}
+
+#edit {
+    background-color: transparent;
+    color: #373737;
+    border: 2px solid black;
+    border-radius: 0;
+    transition: 0.2s ease-in-out;
+    padding: 10px;
+    width: 250px;
+}
+
+#edit:hover {
+    background-color: #272727;
+    color: white;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 100;
+    color: #373737;
+}
+
+input {
+    font-family: "Lato", sans-serif;
+    color: #373737;
+    text-transform: uppercase;
+    font-weight: 100;
+    text-align: center;
+}
+
+#twice {
+    background-image: url("../image/twice.jpg");
+    background-color: rgba(255,255,255,0.93);
+    background-blend-mode: lighten;
+    box-shadow: 0 0 20px 20px white inset;
+    background-size: cover;
+    position: absolute;
+    height: 80%;
+    width: 30%;
+    right: 0;
+    bottom: 0;
+    opacity: 100%;
+    z-index: -1;
+}
+
+select {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    color: #373737;
+    text-transform: uppercase;
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    box-shadow: 1px 1px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    background-size: cover;
+    background-color: rgba(255,255,255,0.8);
+    background-blend-mode: lighten;
+}
+.card p {
+    padding: 20px 0 20px 0;
+    color: black;
+    font-weight: 100;
+    background-color: rgba(255,255,255,0.5);
+    background-blend-mode: lighten;
+
+}
+
+.login {
+    position: absolute;
+    bottom: 7%;
+    right: 2%;
+    text-transform: uppercase;
+}
+
+.user-box {
+    position: absolute;
+    bottom: 7%;
+    left: 2%;
+}
+
+#logout:hover {
+    background-color: rgba(255,0,0,0.2);
+    color: black;
+}
