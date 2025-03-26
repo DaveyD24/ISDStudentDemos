@@ -10,9 +10,11 @@
 
     String name = "";
     if (agreed) {
-        User user = new User(email, password, genre.equalsIgnoreCase("kpop") ? Genre.KPOP : Genre.HARDSTYLE);
+        name = email.split("@")[0];
+        //store some user in session
+        Genre realGenre = genre.equals("Kpop") ? Genre.KPOP : Genre.HARDSTYLE;
+        User user = new User(email, password, realGenre);
         session.setAttribute("loggedInUser", user);
-        name = user.getEmail().split("@")[0];
     }
 
     String imagePath = "image/" + request.getParameter("genre").toLowerCase() + ".jpg";
