@@ -62,10 +62,3 @@
 <pref-footer></pref-footer>
 </body>
 </html>
-
-<script>
-
-    function logout() {
-        window.location.href = "LogoutHandler.jsp";
-    }
-</script>
