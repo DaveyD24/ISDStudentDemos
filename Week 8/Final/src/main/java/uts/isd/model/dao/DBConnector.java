@@ -15,7 +15,7 @@ public class DBConnector {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-        String url = "jdbc:sqlite:TestDb.db";
+        String url = "jdbc:sqlite:RecordStoreDB.db";
         try {
             connection = DriverManager.getConnection(url);
             connection.setAutoCommit(true);
