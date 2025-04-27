@@ -49,3 +49,42 @@
 
 ![Screenshot of console output](/Images/console.png)
 ![Screenshot of live server](/Images/url.png)
+
+## Initial Database Setup
+### Create Database File
+- Locate the Tomcat working directory for your project
+  - This is under `/Users/.SmartTomcat/ProjectName/ContextName`
+  - You may also be able to find it by adding a Run Configuration and examining where it creates the Catalina Base:
+![Screenshot of Run Configuration](/Images/smorttomcar.PNG)
+  - Mac users may need to turn on hidden folders with `CMD + SHIFT + .`
+- Create a file with the extension `.db` 
+
+### Add Database Connector
+- Under the `Java` directory, create the package `uts.isd.model.dao`
+  - If you already have a `model` folder, which you should, then this just means create a `dao` package under the `model` package
+- Copy the `DBConnector.java` file from this project to your newly created `dao` package
+  - **IMPORTANT**: This is the **ONLY** file that you have been given permission to directly copy.
+- Rename line 18 to the name of your newly created `.db` file
+![Screenshot of DBConnector.java file](/Images/Line18.PNG)
+
+## Add a connection to your database
+- On the right side window, click the Database icon
+- Click `+` -> `New` -> `Data Source from Path`
+- Locate your newly created `.db` file
+  - Mac users may need to repeat the steps from earlier to view hidden files
+- Under `Driver`, select `SQLLite`
+- If you see a button along the lines of "_Install missing drivers_", click it and wait for it to finish
+- Click `Test Connection`
+- If successful you should see a dialog like below. Take note of the SQL version
+![Screenshot of SQL Connection](/Images/connection.PNG)
+## Add Dependencies
+- Locate your `pom.xml file`
+- Under the `<dependecies>` tag, add the following code:
+  ```
+    <dependency>
+      <groupId>org.xerial</groupId>
+      <artifactId>sqlite-jdbc</artifactId>
+      <version>x.x.x.0</version>
+    </dependency>
+  ```
+- Between the `version` tag, replace this with version noted earlier 
