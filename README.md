@@ -78,7 +78,7 @@
 - If successful you should see a dialog like below. Take note of the SQL version
 ![Screenshot of SQL Connection](/Images/connection.PNG)
 ## Add Dependencies
-- Locate your `pom.xml file`
+- Locate your `pom.xml` file
 - Under the `<dependecies>` tag, add the following code:
   ```
     <dependency>
