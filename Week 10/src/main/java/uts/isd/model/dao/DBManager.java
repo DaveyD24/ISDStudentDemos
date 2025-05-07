@@ -13,10 +13,10 @@ public abstract class DBManager<T> {
         statement = connection.createStatement();
     }
 
-    protected abstract T add(T object) throws SQLException;
-    protected abstract T get(T object) throws SQLException;
-    protected abstract void update(T oldObject, T newObject) throws SQLException;
-    protected abstract void delete(T object) throws SQLException;
+    public abstract T add(T object) throws SQLException;
+    public abstract T get(T object) throws SQLException;
+    public abstract void update(T oldObject, T newObject) throws SQLException;
+    public abstract void delete(T object) throws SQLException;
 
 
 }
