@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class DBConnector {
     private Connection connection;
 
-    public DBConnector(String path) {
+    public DBConnector() {
         System.setProperty("org.sqlite.lib.verbose", "true");
         try {
             Class.forName("org.sqlite.JDBC");
